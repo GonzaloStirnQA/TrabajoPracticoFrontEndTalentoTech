@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lo de Liam: productos de limpieza hechos en familia.">
+  <title>Lo de Liam | Productos de limpieza hechos en familia</title>
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="header__logo">
+      <img src="assets/img/logo.png" alt="Logo de Lo de Liam">
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <ul class="nav__list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__text">
+        <h1>Limpieza que se hace en casa, para tu casa</h1>
+        <p>En Lo de Liam preparamos productos de limpieza en familia, con cuidado y a buen precio.</p>
+        <a class="btn" href="#productos">Ver productos</a>
+      </div>
+      <img class="hero__img" src="assets/img/logo.png" alt="Gota de agua con hojas, símbolo de Lo de Liam">
+    </section>
+
+    <section class="productos" id="productos">
+      <h2>Nuestros productos</h2>
+      <p class="section__intro">Todo lo que necesitás para dejar la casa impecable.</p>
+
+      <div class="cards">
+        <article class="card">
+          <img src="assets/img/detergente.png" alt="Botella de detergente">
+          <div class="card__body">
+            <span class="card__tag">Cocina</span>
+            <h3>Detergente concentrado</h3>
+            <p>Saca la grasa sin esfuerzo y rinde más. Aroma suave a limón.</p>
+            <p class="card__price">$ 2.500</p>
+            <button class="btn btn--small" type="button">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/img/lavandina.png" alt="Botella de lavandina">
+          <div class="card__body">
+            <span class="card__tag">Desinfección</span>
+            <h3>Lavandina</h3>
+            <p>Desinfecta baños, pisos y superficies. Ideal para la limpieza profunda.</p>
+            <p class="card__price">$ 1.800</p>
+            <button class="btn btn--small" type="button">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/img/piso.png" alt="Botella de limpiador de pisos">
+          <div class="card__body">
+            <span class="card__tag">Hogar</span>
+            <h3>Limpiador de pisos</h3>
+            <p>Deja los pisos brillantes y con una fragancia fresca que dura.</p>
+            <p class="card__price">$ 2.200</p>
+            <button class="btn btn--small" type="button">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/img/desengrasante.png" alt="Botella de desengrasante">
+          <div class="card__body">
+            <span class="card__tag">Cocina</span>
+            <h3>Desengrasante</h3>
+            <p>Para hornos, anafes y campanas. Actúa rápido sobre la grasa pegada.</p>
+            <p class="card__price">$ 3.100</p>
+            <button class="btn btn--small" type="button">Agregar al carrito</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="resenas" id="resenas">
+      <h2>Lo que dicen nuestros clientes</h2>
+
+      <div class="resenas__grid">
+        <blockquote class="review review--destacada">
+          <p>Hace meses que compro todo en Lo de Liam. Los productos rinden un montón y se nota que están hechos con dedicación.</p>
+          <footer>María G.</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>El desengrasante es excelente, me dejó la cocina como nueva.</p>
+          <footer>Juan P.</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>Entregan rápido y la atención es muy amable.</p>
+          <footer>Laura S.</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>El limpiador de pisos tiene un aroma buenísimo y dura todo el día.</p>
+          <footer>Carlos R.</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>Me encanta apoyar un emprendimiento familiar. Calidad y buen precio.</p>
+          <footer>Ana M.</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <div class="contacto__info">
+        <h2>Contactanos</h2>
+        <p>¿Querés hacer un pedido o tenés una consulta? Escribinos y te respondemos a la brevedad.</p>
+      </div>
+
+      <form class="form" action="https://formspree.io/f/mdeagpyd" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button class="btn" type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/img/logo.png" alt="Lo de Liam" class="footer__logo">
+    <p>&copy; 2026 Lo de Liam. Todos los derechos reservados.</p>
+    <p>Gonzalo Stirn - Talento Tech</p>
+  </footer>
+
+</body>
+</html>

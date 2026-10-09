@@ -1,0 +1,271 @@
+/* ===== Variables ===== */
+:root {
+  --teal: #2fa08a;
+  --teal-light: #5bbfa7;
+  --teal-dark: #14473f;
+  --mint: #e8f7f2;
+  --white: #ffffff;
+  --sun: #f2b84b;
+  --radius: 18px;
+  --shadow: 0 6px 18px rgba(20, 71, 63, 0.12);
+}
+
+/* ===== Base ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--teal-dark);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Baloo 2", cursive;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: var(--teal);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+img { max-width: 100%; display: block; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 2px;
+}
+
+/* ===== Header y navegación ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: var(--white);
+  border-bottom: 4px solid var(--teal-light);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header__logo img { height: 70px; width: auto; }
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav__list a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  color: var(--teal-dark);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav__list a:hover { background-color: var(--teal); color: var(--white); }
+
+/* ===== Botones ===== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--teal);
+  color: var(--white);
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover { background-color: var(--teal-dark); transform: translateY(-2px); }
+.btn--small { padding: 0.5rem 1.2rem; font-size: 0.9rem; }
+
+/* ===== Hero (background con degradado) ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--mint) 0%, #bfe8dc 55%, var(--teal-light) 100%);
+}
+
+.hero__text { max-width: 480px; }
+.hero__text h1 { font-size: 3rem; color: var(--teal-dark); margin-bottom: 1rem; }
+.hero__text p { font-size: 1.15rem; margin-bottom: 1.5rem; }
+.hero__img {
+  width: 320px;
+  border-radius: 50%;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+/* ===== Productos (Flexbox) ===== */
+.productos { padding: 4rem 2rem; }
+.section__intro { text-align: center; margin-bottom: 2.5rem; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 1 1 250px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 2px solid var(--mint);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 1.2rem;
+}
+
+.card__body .btn { margin-top: auto; }
+
+.card__tag {
+  padding: 0.1rem 0.8rem;
+  border-radius: 999px;
+  background-color: var(--mint);
+  color: var(--teal);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.card h3 { font-size: 1.4rem; }
+.card__price { font-family: "Baloo 2", cursive; font-size: 1.5rem; font-weight: 800; color: var(--teal); }
+
+/* ===== Reseñas (Grid) ===== */
+.resenas { padding: 4rem 2rem; background-color: var(--mint); }
+
+.resenas__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2rem auto 0;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-left: 6px solid var(--teal-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.review footer { font-weight: 700; color: var(--teal); }
+
+.review--destacada {
+  grid-column: span 2;
+  background-color: var(--teal);
+  color: var(--white);
+  border-left-color: var(--sun);
+  font-size: 1.2rem;
+}
+
+.review--destacada footer { color: var(--white); }
+
+/* ===== Contacto ===== */
+.contacto {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contacto__info { flex: 1; }
+.contacto__info h2 { text-align: left; }
+
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+  background-color: var(--mint);
+  border-radius: var(--radius);
+}
+
+.form label { font-weight: 700; }
+
+.form input, .form textarea {
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--teal-light);
+  border-radius: 12px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+
+.form .btn { margin-top: 1rem; align-self: flex-start; }
+
+/* ===== Footer ===== */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--teal-dark);
+  color: var(--white);
+}
+
+.footer__logo {
+  height: 80px;
+  margin: 0 auto 1rem;
+  padding: 0.3rem 1rem;
+  background-color: var(--white);
+  border-radius: var(--radius);
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 900px) {
+  .resenas__grid { grid-template-columns: repeat(2, 1fr); }
+  .review--destacada { grid-column: span 2; }
+  .hero { flex-direction: column-reverse; text-align: center; }
+  .hero__img { width: 220px; }
+}
+
+@media (max-width: 700px) {
+  .header { flex-direction: column; padding: 0.5rem 1rem; position: static; }
+  .nav__list { flex-wrap: wrap; justify-content: center; }
+  .hero__text h1 { font-size: 2.2rem; }
+
+  .contacto { flex-direction: column; gap: 1.5rem; }
+  .contacto__info h2 { text-align: center; }
+  .contacto__info { text-align: center; }
+  .form { width: 100%; padding: 1.2rem; }
+}
+
+@media (max-width: 560px) {
+  .resenas__grid { grid-template-columns: 1fr; }
+  .review--destacada { grid-column: span 1; }
+  .card { max-width: 100%; }
+}
