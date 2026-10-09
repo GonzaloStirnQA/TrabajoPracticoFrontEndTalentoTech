@@ -24,6 +24,10 @@
         <li><a href="#resenas">Reseñas</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+      <button class="nav__toggle" id="nav-toggle" type="button"
+        aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">☰</button>
+
+<nav class="nav" id="nav-menu" aria-label="Navegación principal">
     </nav>
   </header>
 
@@ -141,6 +145,21 @@
     <p>&copy; 2026 Lo de Liam. Todos los derechos reservados.</p>
     <p>Gonzalo Stirn - Talento Tech</p>
   </footer>
+<script>
+  const toggle = document.getElementById("nav-toggle");
+  const menu = document.getElementById("nav-menu");
 
+  toggle.addEventListener("click", () => {
+    const abierto = menu.classList.toggle("nav--open");
+    toggle.setAttribute("aria-expanded", abierto);
+  });
+
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("nav--open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
 </body>
 </html>
