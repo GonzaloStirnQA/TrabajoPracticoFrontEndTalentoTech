@@ -161,7 +161,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   padding: 1.2rem;
 }
 
-.card__body .btn { margin-top: auto; }
+.card__price { margin-top: auto; }
 
 .card__tag {
   padding: 0.1rem 0.8rem;
