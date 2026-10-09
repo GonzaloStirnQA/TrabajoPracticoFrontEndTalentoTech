@@ -19,4 +19,4 @@ Pre-entrega del proyecto de Front End (Talento Tech).
 
 ## Sitio publicado
 
-Ver en GitHub Pages: _(pegar acá el link)_
+Ver en GitHub Pages: https://gonzalostirnqa.github.io/TrabajoPracticoFrontEndTalentoTech/
